@@ -20,7 +20,6 @@ import {
 } from "../../../services/api/dashboardApi";
 import { getUpcomingEvents } from "../../../services/api/eventApi";
 
-
 const Dashboard = () => {
   /* ---------- FILTER STATE ---------- */
   const currentMonth = new Date().toISOString().slice(0, 7);
@@ -57,7 +56,7 @@ const Dashboard = () => {
         };
 
         const [
-          topStats,
+          topStats,   
           todaySummary,
           departments,
           monthlyAttendance,
@@ -106,13 +105,14 @@ const Dashboard = () => {
 
       {/* TOP CARDS */}
       <DashboardTopCards data={stats} loading={loading} />
-
+  
       {/* CHARTS */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-xl shadow-sm">
           <h2 className="font-semibold mb-4">Attendance Overview</h2>
           <AttendanceChart data={attendanceData} />
         </div>
+        
 
         <div className="bg-white p-6 rounded-xl shadow-sm">
           <h2 className="font-semibold mb-4">Salary Overview</h2>

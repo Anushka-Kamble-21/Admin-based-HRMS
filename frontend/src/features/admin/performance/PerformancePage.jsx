@@ -99,7 +99,7 @@ const PerformancePage = () => {
       </div>
 
       {loading ? (
-        <div className="text-sm text-gray-500">Loading attendance...</div>
+        <div className="text-sm text-gray-500">Loading ...</div>
       ) : (
         <PerformanceTable
           employees={employees}
@@ -107,15 +107,6 @@ const PerformancePage = () => {
           selectedMonth={selectedMonth}
           onReviewSaved={loadData}
         />
-      )}
-
-      {loading ? (
-        <div className="text-sm text-gray-500">Loading attendance...</div>
-      ) : (
-        <MonthlyPerformanceTable
-          performances={monthlyPerformances}
-        />
-
       )}
 
     </div>
